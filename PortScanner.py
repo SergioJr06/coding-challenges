@@ -13,6 +13,8 @@ def scan_port(endereco, porta):
             try:
                 banner = s.recv(1024).decode().strip()
                 print(f"[+] Porta {porta} aberta! Serviço: {banner}")  
+            except:
+                print(f"[+] Porta {porta} aberta! (Serviço desconhecido)")
         s.close()
      
 if __name__ == "__main__": #este name main significa para rodar o programa daq para baixo se for executado

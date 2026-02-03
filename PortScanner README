@@ -1,0 +1,49 @@
+🛡️ Multi-Threaded Port Scanner
+
+Este é um scanner de portas robusto desenvolvido em Python focado em reconhecimento de rede (Reconnaissance). O projeto foi criado com o objetivo de equilibrar alta performance através de concorrência e estabilidade via controle de semáforos.
+🚀 Features
+
+    Multi-threading: Utiliza a biblioteca threading para testar múltiplas portas simultaneamente, reduzindo drasticamente o tempo de varredura.
+
+    Controle de Concorrência (Semaphore): Implementa threading.Semaphore para limitar o número de conexões ativas, evitando sobrecarga no sistema local e reduzindo a detecção por firewalls.
+
+    Banner Grabbing: Tenta identificar o serviço e a versão que está rodando em portas abertas através da captura de banners de resposta.
+
+    Cronômetro Integrado: Monitora o desempenho do script, exibindo o tempo total de execução ao final de cada scan.
+
+    Interface Clean: Saída silenciosa que reporta apenas portas abertas e informações relevantes, seguindo a filosofia de ferramentas como Nmap.
+
+💻 Como Usar
+Pré-requisitos
+
+    Python 3.x instalado.
+    Git instalado para clonagem.
+
+Instalação e Execução
+
+    Clone o repositório:
+    Bash
+
+    git clone https://github.com/SEU_USUARIO/coding-challenges.git
+    cd coding-challenges
+
+    Execute o script:
+    Bash
+
+    python PortScanner.py
+
+    Interação:
+
+        Insira o endereço IP ou Hostname (ex: 127.0.0.1 ou google.com).
+
+        Defina o limite de portas que deseja escanear (ex: 1000).
+
+⚙️ Especificações Técnicas
+Parâmetro	Descrição
+Timeout	1.0 - 2.0 segundos (ajustável para sensibilidade da rede)
+Limite de Threads	100 conexões simultâneas (Semáforo)
+Protocolo	TCP (SOCK_STREAM)
+Bibliotecas	socket, threading, time
+⚠️ Aviso Legal
+
+Este projeto foi desenvolvido por Sérgio Eduardo Pereira Fonseca Júnior, estudante de Engenharia da Computação, para fins estritamente educacionais e de pesquisa em segurança cibernética. O uso desta ferramenta contra alvos sem autorização prévia é ilegal e antiético. O desenvolvedor não se responsabiliza pelo uso indevido deste software.

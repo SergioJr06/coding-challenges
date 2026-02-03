@@ -8,8 +8,11 @@ def scan_port(endereco, porta):
     with thread_limit:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(2)
+        
         if s.connect_ex((endereco, porta)) == 0:
-            print(f"[+] Porta {porta} aberta!")  
+            try:
+                banner = s.recv(1024).decode().strip()
+                print(f"[+] Porta {porta} aberta! Serviço: {banner}")  
         s.close()
      
 if __name__ == "__main__": #este name main significa para rodar o programa daq para baixo se for executado
